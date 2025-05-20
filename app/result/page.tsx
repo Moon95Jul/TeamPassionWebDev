@@ -15,17 +15,17 @@ export default function Result() {
 
       <h1 className="text-2xl font-bold mb-4">🔥 김치찌개</h1>
 
-      <div className="w-full h-64 relative mb-4">
+      <div className="w-full max-w-xs aspect-square relative mb-4">
         <Image
-          src={kimchi} // 퍼블릭 폴더에 이미지 추가 필요
+          src={kimchi}
           alt="김치찌개"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           className="rounded"
         />
       </div>
 
-      <p className="mb-6 text-lg font-medium">기운 없을 땐 잘끓한 국물 한입!</p>
+      <p className="mb-6 text-lg font-medium">기운 없을 땐 잘끓인 국물 한입!</p>
 
       <div className="flex flex-wrap gap-2">
         <span className="bg-gray-100 px-3 py-1 rounded-full text-sm">
