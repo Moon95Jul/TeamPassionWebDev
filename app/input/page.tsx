@@ -49,34 +49,6 @@ export default function Input() {
             <option>면</option>
           </select>
         </div>
-        <div>
-          <label className="block text-xs text-gray-500 mb-1">
-            날씨를 선택하세요
-          </label>
-          <select className="w-full p-3 border rounded">
-            <option>흐림</option>
-            <option>맑음</option>
-            <option>비</option>
-          </select>
-        </div>
-
-        <div>
-          <label className="block mb-1">예산</label>
-          <input
-            type="range"
-            min="0"
-            max="50000"
-            value={budget}
-            onChange={(e) => setBudget(Number(e.target.value))}
-            className="w-full"
-          />
-          <div className="text-right font-semibold mt-1">
-            ₩{budget.toLocaleString()}
-          </div>
-        </div>
-
-        <button className="w-full p-3 border rounded">📍 현재 위치 사용</button>
-
         <button
           onClick={handleSubmit}
           className="w-full bg-gray-800 text-white p-3 rounded hover:bg-gray-700"
