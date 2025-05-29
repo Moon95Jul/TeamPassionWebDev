@@ -13,17 +13,20 @@ export default function Input() {
   const handleSubmit = async () => {
     const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
+    // "아무거나" 선택 시 null로 설정
+    const requestData = {
+      cuisine: cuisine === "아무거나" ? null : cuisine,
+      protein: protein === "아무거나" ? null : protein,
+      dishBase: dishBase === "아무거나" ? null : dishBase,
+    };
+
     try {
       const response = await fetch(`${BASE_URL}/api-menu/recommend`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          cuisine,
-          protein,
-          dishBase,
-        }),
+        body: JSON.stringify(requestData),
       });
 
       if (!response.ok) {
@@ -59,6 +62,7 @@ export default function Input() {
             <option>한식</option>
             <option>중식</option>
             <option>일식</option>
+            <option>아무거나</option>
           </select>
         </div>
         <div>
@@ -73,6 +77,7 @@ export default function Input() {
             <option>소</option>
             <option>돼지</option>
             <option>닭</option>
+            <option>아무거나</option>
           </select>
         </div>
         <div>
@@ -87,6 +92,7 @@ export default function Input() {
             <option>밥</option>
             <option>빵</option>
             <option>면</option>
+            <option>아무거나</option>
           </select>
         </div>
         <button
