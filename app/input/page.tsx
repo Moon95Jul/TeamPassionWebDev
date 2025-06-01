@@ -47,11 +47,11 @@ export default function Input() {
       <button onClick={() => router.back()} className="text-xl mb-4">
         ←
       </button>
-      <h1 className="text-2xl font-bold mb-6">오늘은 무엇을 먹을까?</h1>
+      <h1 className="text-3xl font-bold mb-6">오늘은 무엇을 먹을까?</h1>
 
       <div className="space-y-4">
         <div>
-          <label className="block text-xs text-gray-500 mb-1">
+          <label className="block text-s text-gray-500 mb-1">
             음식 종류를 선택하세요
           </label>
           <select
@@ -66,7 +66,7 @@ export default function Input() {
           </select>
         </div>
         <div>
-          <label className="block text-xs text-gray-500 mb-1">
+          <label className="block text-s text-gray-500 mb-1">
             주재료를 선택하세요
           </label>
           <select
@@ -81,7 +81,7 @@ export default function Input() {
           </select>
         </div>
         <div>
-          <label className="block text-xs text-gray-500 mb-1">
+          <label className="block text-s text-gray-500 mb-1">
             주식(밥/빵/면)을 선택하세요
           </label>
           <select
